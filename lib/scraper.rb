@@ -24,7 +24,7 @@ class Scraper
     
     profiles = doc.css(".social-icon-container a")
     
-    profiles each do |info|
+    profiles.each do |info|
       if info.attr('href').include?("twitter")
           hash[:twitter] = info.attr('href')
         elsif info.attr('href').include?("linkedin")
