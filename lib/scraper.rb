@@ -35,8 +35,8 @@ class Scraper
           hash[:blog] = info.attr('href')
         end
       end
-    hash[:profile_quote] = profile_page.css(".profile-quote").text if profile_page.css(".profile-quote")
-    hash[:bio] = profile_page.css("div.bio-content.content-holder div.description-holder p").text
+    hash[:profile_quote] = doc.css(".profile-quote").text 
+    hash[:bio] = doc.css("div.bio-content.content-holder div.description-holder p").text
     
   end
 
